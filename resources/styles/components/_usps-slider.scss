@@ -1,0 +1,57 @@
+.c-usps-slider {
+  padding: 1.25rem 0;
+  background-color: rgba($white, 0.85);
+
+  .container-fluid {
+    position: relative;
+  }
+
+  .c-deco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6.25rem;
+    max-width: 100%;
+    transform: translate(10%, -95%);
+
+    @include media-breakpoint-up(sm) {
+      transform: translate(10%, -80%);
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 8.375rem;
+      transform: translate(10%, -70%);
+    }
+  }
+
+  &__swiper {
+    @include media-breakpoint-up(sm) {
+      margin-right: 3.125rem;
+      margin-left: 3.125rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-right: 6.25rem;
+      margin-left: 8.75rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 9.375rem;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1875rem;
+    line-height: 1.579;
+    gap: 0.625rem;
+
+    svg {
+      flex-shrink: 0;
+      width: 1.875rem;
+      height: 1.875rem;
+      color: $green;
+    }
+  }
+}

@@ -2,7 +2,7 @@
   margin-bottom: 0.625rem;
   font-family: $font-family-base;
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: normal;
 }
 
@@ -23,9 +23,37 @@
     line-height: 1.375;
   }
 
+  &__price {
+    margin-bottom: 0.9375rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid $light-gray;
+    font-family: $font-family-base;
+    font-size: 1.375rem;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+
+    small {
+      font-size: 0.6875rem;
+    }
+  }
+
+  &__options {
+    margin-bottom: 0.9375rem;
+
+    &__label {
+      display: block;
+      margin-bottom: 0.3125rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+
   &__order-btn {
+    position: relative;
     width: 100%;
-    margin-top: 1.875rem;
+
+    &.is-loading {
+      color: rgba($white, 0.2);
+    }
   }
 }
 
@@ -42,5 +70,35 @@
     th {
       font-weight: 300;
     }
+  }
+}
+
+.c-product-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  gap: 0.625rem 0.3125rem;
+
+  &__checkbox {
+    padding: 0.2188rem 0.8125rem;
+    transition:
+      background-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      border-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      color 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid $light-gray;
+    border-radius: $border-radius;
+    cursor: pointer;
+  }
+
+  input {
+    @include visually-hidden;
+  }
+
+  input:checked + &__checkbox {
+    border-color: $lila;
+    background-color: $lila;
+    color: $white;
   }
 }

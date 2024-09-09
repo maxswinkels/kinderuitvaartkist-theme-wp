@@ -31,7 +31,7 @@ module.exports = async (app) => {
      *
      * This should be the URL you use to visit your local development server.
      */
-    .proxy('http://van-wijk-uitvaartkisten.local')
+    .proxy('http://van-wijk-kinderkistjes.local')
 
     /**
      * Development URL to be used in the browser.

@@ -32,15 +32,21 @@
 
               <div class="col-md-6 col-lg-3 order-md-2">
                 <div class="c-footer-socials c-social-icons">
-                  <a class="c-social-icons__link" target="_blank" rel="noopener nofollow" href="https://nl-nl.facebook.com/vanwijkuitvaartkisten/">
-                    @svg('facebook')
-                  </a>
-                  <a class="c-social-icons__link" target="_blank" rel="noopener nofollow" href="https://www.instagram.com/vanwijkuitvaartkisten/">
-                    @svg('instagram')
-                  </a>
-                  <a class="c-social-icons__link" target="_blank" rel="noopener nofollow" href="https://www.linkedin.com/company/vanwijkuitvaartkisten/">
-                    @svg('linkedin')
-                  </a>
+                  @if(isset($contact_details->facebook) && !empty($contact_details->facebook))
+                    <a class="c-social-icons__link" target="_blank" rel="noopener nofollow" href="{{ $contact_details->facebook }}">
+                      @svg('facebook')
+                    </a>
+                  @endif
+                  @if(isset($contact_details->instagram) && !empty($contact_details->instagram))
+                    <a class="c-social-icons__link" target="_blank" rel="noopener nofollow"  href="{{ $contact_details->instagram }}">
+                      @svg('instagram')
+                    </a>
+                  @endif
+                  @if(isset($contact_details->linkedin) && !empty($contact_details->linkedin))
+                    <a class="c-social-icons__link" target="_blank" rel="noopener nofollow"  href="{{ $contact_details->linkedin }}">
+                      @svg('linkedin')
+                    </a>
+                  @endif
                 </div>
               </div>
 

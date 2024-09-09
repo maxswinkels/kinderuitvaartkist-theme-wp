@@ -44,12 +44,17 @@
     line-height: 1.412;
 
     .c-product-card:hover & {
-      color: $gold;
+      color: $green;
     }
 
     .c-product-card--category & {
       font-size: 1.75rem;
       line-height: normal;
+
+      .c-product-related-slider & {
+        font-size: 1.0625rem;
+        line-height: 1.412;
+      }
     }
   }
 
@@ -62,6 +67,10 @@
       margin-top: 0.625rem;
       font-size: 1.125rem;
       line-height: 1.333;
+
+      .c-product-related-slider & {
+        display: none;
+      }
     }
   }
 }

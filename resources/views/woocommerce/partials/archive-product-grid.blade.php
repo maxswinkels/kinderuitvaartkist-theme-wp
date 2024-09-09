@@ -7,14 +7,14 @@
       <div class="col-md-3">
 
         <div class="c-filters" data-filters>
-          <button class="c-filters__trigger btn btn-gold" data-filters-open>
+          <button class="c-filters__trigger btn btn-lila" data-filters-open>
             Filters
           </button>
           <div class="c-filters__collapse" data-filters-collapse>
 
             <div class="c-filters__collapse__inner">
             
-              <button class="c-filters__close btn btn-black" data-filters-close>
+              <button class="c-filters__close btn btn-green" data-filters-close>
                 Sluiten
               </button>
 

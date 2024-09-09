@@ -9,11 +9,11 @@ use App\Fields\Product\General;
 use App\Fields\Product\RelatedProducts;
 use App\Fields\Product\ProductVariants;
 
-class Product extends Field
+class SingleProduct extends Field
 {
     public function fields()
     {
-        $builder = new FieldsBuilder('product', [
+        $builder = new FieldsBuilder('single_product', [
             'title' => 'Product information',
             'position' => 'acf_after_title',
             'hide_on_screen' => ['the_content', 'excerpt']

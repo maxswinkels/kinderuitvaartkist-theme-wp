@@ -9,6 +9,12 @@
     margin-right: 0;
   }
 
+  &--cat {
+    @include media-breakpoint-up(sm) {
+      margin: 0;
+    }
+  }
+
   &__slide.swiper-slide {
     height: auto;
 
@@ -27,13 +33,13 @@
   margin-bottom: 0;
 
   @include media-breakpoint-up(md) {
+    margin-top: 0;
     margin-bottom: 1.5625rem;
   }
 
   &__link {
     font-size: 1.0625rem;
-    font-weight: 700;
-    line-height: 1.412;
+    font-weight: $font-weight-bold;
     text-decoration: none;
   }
 

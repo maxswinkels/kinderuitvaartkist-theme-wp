@@ -57,5 +57,12 @@
 @import "components/product-variants";
 @import "components/social-icons";
 @import "components/teaser-blocks";
+@import "components/usps-slider";
 @import "components/usps";
 @import "components/wpcf7";
+
+// woocommerce
+@import "woocommerce/account";
+@import "woocommerce/cart";
+@import "woocommerce/checkout";
+@import "woocommerce/order-received";

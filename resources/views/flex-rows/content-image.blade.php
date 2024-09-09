@@ -2,7 +2,7 @@
     $content = (object) $row->row_content;
     $bg_color = isset($content->bg_color) && $content->bg_color ? $content->bg_color : '';
     if(isset($is_product_page) && $is_product_page) {
-        $bg_color = 'bg-light-gold';
+        $bg_color = 'bg-light-lila';
     }
 @endphp
 
@@ -12,7 +12,7 @@
       <div class="row d-flex {{ $content->image_position == 'left' ? 'flex-sm-row-reverse' : '' }}">
         <div class="col-md-6 align-self-center c-content-image__col-content">
           <div class="c-content-image__col-content__inner">
-            @include('macros.text-block', ['content' => $content, 'class' => $content->image_position == 'left' ? 'ms-md-auto' : '', 'heading_type' => 'h1'])
+            @include('macros.text-block', ['content' => $content, 'class' => $content->image_position == 'left' ? 'ms-md-auto' : '', 'heading_type' => 'h1', 'btn_class' => 'btn-green'])
           </div>
         </div>
         <div class="col-md-6 c-content-image__col-image">

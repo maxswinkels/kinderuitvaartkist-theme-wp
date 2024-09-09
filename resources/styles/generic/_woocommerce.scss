@@ -22,9 +22,9 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      background: $gold;
+      background: $lila;
       color: $white;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
 
       &.current {
         background-color: #8e713a;

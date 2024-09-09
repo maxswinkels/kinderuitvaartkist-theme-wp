@@ -25,5 +25,25 @@
               </a>
             </div>
         </div>
+        @if (isset($usps) && !empty($usps))
+          <div class="c-usps-slider">
+            <div class="container-fluid">
+              <img src="@asset('deco-1.png')" alt="" class="c-deco">
+              <div class="c-usps-slider__swiper swiper" data-usps-slider>
+                <div class="c-usps-slider__wrapper swiper-wrapper">
+                  @foreach ($usps as $usps)
+                    @php
+                      $usps = (object) $usps;
+                    @endphp
+                    <div class="c-usps-slider__slide swiper-slide">
+                      @svg('check')
+                      {{ $usps->text }}
+                    </div>
+                  @endforeach
+                </div>
+              </div>
+            </div>
+          </div>
+        @endif
     </header>
 @endif

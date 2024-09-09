@@ -16,6 +16,7 @@
     @php
       the_post();
       $product = wc_get_product();
+      $cur_price = $product->get_regular_price();
     @endphp
 
     <section class="o-section o-section--breadcrumb">
@@ -36,7 +37,7 @@
         </div>
       </div>
     </section>
-
+    
     @include('partials.flex-rows', [
       'is_product_page' => true,
     ])

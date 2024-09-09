@@ -128,7 +128,7 @@
 
               &:hover,
               &:focus {
-                color: $gold;
+                color: $lila;
               }
             }
           }
@@ -162,7 +162,7 @@
     text-decoration: none;
 
     &.is-active {
-      color: $gold;
+      color: $lila;
     }
 
     &:hover:not(.no-link) {

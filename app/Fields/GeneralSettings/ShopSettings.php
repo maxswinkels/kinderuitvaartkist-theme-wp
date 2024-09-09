@@ -21,11 +21,6 @@ class ShopSettings extends Partial
                     'instructions' => 'Voorbeeld: <i>[yith_wcan_filters slug="naam"]</i>'
                 ])
 
-                ->addText('product_contact_form_shortcode', [
-                    'label' => 'Contact form 7 code - Product detail',
-                    'instructions' => 'Voorbeeld: <i>[contact-form-7 id="id" title="title"]</i>'
-                ])
-
                 ->addLink('accordion_inner_lining_link', [
                     'label' => 'Link binnenbekleding - Product detail',
                     'instructions' => 'Deze link wordt getoond in de uitklapbare sectie "binnenbekleding" op de product detail pagina.',
@@ -35,7 +30,6 @@ class ShopSettings extends Partial
                     'label' => 'Link maatvoering - Product detail',
                     'instructions' => 'Deze link wordt getoond in de uitklapbare sectie "maatvoering" op de product detail pagina.',
                 ]);
-
 
         return $shop_settings;
     }

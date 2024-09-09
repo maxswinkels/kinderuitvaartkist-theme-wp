@@ -6,15 +6,16 @@
     width: 3.125rem;
     height: 3.125rem;
     margin-right: 0.625rem;
-    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-    background-color: $black;
+    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: $border-radius;
+    background-color: $lila;
     color: $white;
 
     &:hover,
     &:focus {
       outline: none;
-      background-color: $gold;
-      color: $white;
+      background-color: $white;
+      color: $lila;
       text-decoration: none;
     }
 

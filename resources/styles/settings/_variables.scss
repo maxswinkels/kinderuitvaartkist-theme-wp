@@ -51,8 +51,8 @@ $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start custom-color-variables
-$gold:      #B08E4D;
-$green:     #505F49;
+$lila:      #C9BBCF;
+$green:     #ACC99F;
 $light-gray: #e5e5e5;
 // scss-docs-end custom-color-variable
 
@@ -76,7 +76,7 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       $gold; //$blue !default;
+$primary:       $lila; //$blue !default;
 $secondary:     $green; //$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -88,7 +88,7 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "gold":          $gold,
+  "lila":          $lila,
   "green":         $green,
   "white":         $white,
   "black":         $black,
@@ -109,7 +109,7 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio:   4.5 !default;
+$min-contrast-ratio:   1.5; //4.5 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
 $color-contrast-dark:      $black !default;
@@ -541,7 +541,7 @@ $border-color:                $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               0; //.25rem !default;
+$border-radius:               999em; //.25rem !default;
 $border-radius-sm:            0; //.2rem !default;
 $border-radius-lg:            0; //.3rem !default;
 $border-radius-pill:          0; //50rem !default;
@@ -784,7 +784,7 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y:               0.5625rem; //input-btn-padding-y !default;
+$btn-padding-y:               0.5938rem; //input-btn-padding-y !default;
 $btn-padding-x:               1.1875rem; //$input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               1.0625rem; //$input-btn-font-size !default;

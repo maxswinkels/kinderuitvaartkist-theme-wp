@@ -3,7 +3,7 @@
     $unique_id = wp_unique_id();
 @endphp
 
-<section class="o-section o-section--accordion bg-light-gold">
+<section class="o-section o-section--accordion bg-light-lila">
   <div class="container-fluid-lg">
     <h1 class="h3">{{ $content->title }}</h1>
 

@@ -72,11 +72,15 @@
           </div>
 
           @if (isset($contact_details->phone_raw) || isset($contact_details->phone_display))
-            <a href="tel:{{ $contact_details->phone_raw ?? $contact_details->phone_display }}" target="_blank" class="c-navbar__phone btn btn-black">
+            <a href="tel:{{ $contact_details->phone_raw ?? $contact_details->phone_display }}" target="_blank" class="c-navbar__phone btn btn-lila">
                 @svg('phone')
-                <span>{{ $contact_details->phone_display }}</span>
             </a>
           @endif
+
+          <button type="button" class="c-navbar__cart btn btn-lila" data-cart-open>
+            @svg('cart')
+            <div class="c-navbar__cart__count" data-cart-amount></div>
+          </button>
 
           <button class="c-navbar__toggle" type="button" data-navbar-toggle>
               <span class="visually-hidden"><?php _e('Toggle navigation','element-offices') ?></span>

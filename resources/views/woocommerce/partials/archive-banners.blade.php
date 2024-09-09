@@ -14,7 +14,7 @@
           <h3 class="c-product-banner__title">
             {!! App\boldWordFormat($banner->title ) !!}
           </h3>
-          @include('macros.button', ['link' => $banner->link, 'class' => $btn_class ?? 'btn-gold stretched-link'])
+          @include('macros.button', ['link' => $banner->link, 'class' => $btn_class ?? 'btn-lila stretched-link'])
         </div>
       </div>
     </div>

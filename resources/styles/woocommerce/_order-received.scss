@@ -1,0 +1,32 @@
+// stylelint-disable
+.woocommerce-order-received {
+  .woocommerce-order {
+    padding: 1.875rem 1.875rem 2.5rem;
+    background-color: $white;
+  }
+
+  .woocommerce-thankyou-order-received {
+    @extend %heading;
+
+    @include font-size($h3-font-size);
+
+    margin-bottom: 20px;
+  }
+
+  .woocommerce-thankyou-order-details {
+    width: 100%;
+    margin-bottom: 0.9375rem;
+    padding: 1.25rem;
+    background: rgba($green, 0.2);
+    list-style: none;
+  }
+
+  .woocommerce-order-details {
+    margin-top: 0.9375rem;
+  }
+
+  .woocommerce-table--order-details {
+    margin-bottom: 0;
+  }
+}
+// stylelint-enable

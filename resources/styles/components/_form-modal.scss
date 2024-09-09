@@ -17,11 +17,11 @@
     padding: 0;
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     border: none;
-    background-color: $gold;
+    background-color: $lila;
     color: $white;
 
     &:hover {
-      @include gradient-bg(tint-color($gold, $btn-hover-bg-shade-amount));
+      @include gradient-bg(tint-color($lila, $btn-hover-bg-shade-amount));
     }
 
     svg {

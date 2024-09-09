@@ -9,3 +9,4 @@
   </main>
 
 @include('sections.footer')
+@include('partials.cart')

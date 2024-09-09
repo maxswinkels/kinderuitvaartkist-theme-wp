@@ -15,6 +15,11 @@ class ContactInfo extends Partial
             ->addGroup('contact_details', [
                 'label' => ' ',
             ])
+                ->addText('name', [
+                    'label' => 'Naam',
+                    'instructions' => 'Om een tekst <strong>vet</strong> te maken, voeg je voor en achter de tekst een sterretje toe: *tekst*',
+                ])
+
                 ->addTextarea('address', [
                     'label' => 'Adres',
                     'rows' => 3,
@@ -40,6 +45,18 @@ class ContactInfo extends Partial
                 ->addUrl('whatsapp_link', [
                     'label' => 'Whatsapp link',
                     'instructions' => 'Gebruik https://wa.me/<nummer> waarbij het <nummer> een volledig telefoonnummer in internationaal formaat is. Laat nullen, haakjes of streepjes weg bij het toevoegen van het telefoonnummer in internationaal formaat.'
+                ])
+
+                ->addUrl('facebook', [
+                    'label' => 'Facebook link'
+                ])
+
+                ->addUrl('instagram', [
+                    'label' => 'Instagram link'
+                ])
+
+                ->addUrl('linkedin', [
+                    'label' => 'Linkedin link'
                 ]);
 
         return $contact_info;

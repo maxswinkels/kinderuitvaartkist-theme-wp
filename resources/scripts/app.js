@@ -5,6 +5,7 @@ import * as Navbar from './modules/Navbar';
 import * as Filters from './modules/Filters';
 import * as Tooltips from './modules/tooltips';
 import * as Sliders from './modules/sliders';
+import * as Woocommerce from './modules/Woocommerce';
 
 /**
  * app.main
@@ -16,7 +17,7 @@ const main = async (err) => {
   }
 
   // application code
-  const modules = [Navbar, Filters, Sliders, Tooltips];
+  const modules = [Navbar, Filters, Sliders, Tooltips, Woocommerce];
 
   for (const module of modules) {
     if (!module.init) return;

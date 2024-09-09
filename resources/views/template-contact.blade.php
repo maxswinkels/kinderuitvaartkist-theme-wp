@@ -8,9 +8,9 @@ Template Name: Contact pagina
 @while(have_posts()) @php(the_post())
   @include('partials.page-header')
 
-  <section class="o-section o-section--contact bg-light-gold">
+  <section class="o-section o-section--contact bg-light-lila">
     <div class="container-fluid-xl">
-
+      
       <div class="c-contact-intro o-content u-text-large">
         {!! $fields->contact_intro_content !!}
       </div>
@@ -26,7 +26,8 @@ Template Name: Contact pagina
           <div class="col-md-6">
             <div class="c-contact-blocks">
               <div class="c-contact-block u-text-large">
-                <h2><strong>Van Wijk</strong> Uitvaartkisten</h2>
+                <img src="@asset('deco-2.png')" alt="" class="c-deco">
+                <h2>{!! App\boldWordFormat($contact_details->name) !!}</h2>
                 <ul class="c-contact-block__links">
                   <li class="c-contact-block__links__item">
                     @if (isset($fields->faq_link))
@@ -36,27 +37,30 @@ Template Name: Contact pagina
                       </a>
                     @endif
                   </li>
-                  <li class="c-contact-block__links__item">
-                    <a target="_blank" rel="noopener nofollow" href="https://nl-nl.facebook.com/vanwijkuitvaartkisten/"
-                      class="c-contact-block__links__link">
-                      @svg('circle-facebook')
-                      Volg ons op Facebook
-                    </a>
-                  </li>
-                  <li class="c-contact-block__links__item">
-                    <a target="_blank" rel="noopener nofollow" href="https://www.instagram.com/vanwijkuitvaartkisten/"
-                      class="c-contact-block__links__link">
-                      @svg('circle-instagram')
-                      Volg ons op Instagram
-                    </a>
-                  </li>
-                  <li class="c-contact-block__links__item">
-                    <a target="_blank" rel="noopener nofollow" href="https://www.linkedin.com/company/vanwijkuitvaartkisten/"
-                      class="c-contact-block__links__link">
-                      @svg('circle-linkedin')
-                      Volg ons op LinkedIn
-                    </a>
-                  </li>
+                  @if(isset($contact_details->facebook) && !empty($contact_details->facebook))
+                    <li class="c-contact-block__links__item">
+                      <a target="_blank" rel="noopener nofollow" href="{{ $contact_details->facebook }}" class="c-contact-block__links__link">
+                        @svg('circle-facebook')
+                        Volg ons op Facebook
+                      </a>
+                    </li>
+                  @endif
+                  @if(isset($contact_details->instagram) && !empty($contact_details->instagram))
+                    <li class="c-contact-block__links__item">
+                      <a target="_blank" rel="noopener nofollow" href="{{ $contact_details->instagram }}" class="c-contact-block__links__link">
+                        @svg('circle-instagram')
+                        Volg ons op Instagram
+                      </a>
+                    </li>
+                  @endif
+                  @if(isset($contact_details->linkedin) && !empty($contact_details->linkedin))
+                    <li class="c-contact-block__links__item">
+                      <a target="_blank" rel="noopener nofollow" href="{{ $contact_details->linkedin }}" class="c-contact-block__links__link">
+                        @svg('circle-linkedin')
+                        Volg ons op LinkedIn
+                      </a>
+                    </li>
+                  @endif
                 </ul>
               </div>
               <div class="c-contact-block u-text-large">
@@ -97,7 +101,7 @@ Template Name: Contact pagina
           </div>
           <div class="col-md-6 align-self-center">
             <div class="o-content">
-              <h2 class="h1"><strong>Van Wijk</strong> Uitvaartkisten</h2>
+              <h2 class="h1">{!! App\boldWordFormat($contact_details->name) !!}</h2>
               <p class="u-text-large">
                 @if (isset($contact_details->address))
                   {!! $contact_details->address !!}

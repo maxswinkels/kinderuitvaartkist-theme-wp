@@ -12,12 +12,12 @@ class BgColors extends Partial
         $bg_colors = new FieldsBuilder('bg_colors');
 
         $bg_colors
-            ->addSelect('bg_color', [
+        ->addSelect('bg_color', [
                 'label' => 'Achtergrondkleur',
             ])
                 ->addChoices(
                     ['' => 'Wit'],
-                    ['bg-light-gold' => 'Licht goud'],
+                    ['bg-light-lila' => 'Licht lila'],
                 );
 
         return $bg_colors;

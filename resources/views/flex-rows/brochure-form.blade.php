@@ -2,7 +2,7 @@
     $content = (object) $row->row_content;
 @endphp
 
-<section class="o-section o-section--brochure-form bg-light-gold">
+<section class="o-section o-section--brochure-form bg-light-lila">
   <div class="container-fluid-xl">
     <div class="row">
       <div class="col-md-6">

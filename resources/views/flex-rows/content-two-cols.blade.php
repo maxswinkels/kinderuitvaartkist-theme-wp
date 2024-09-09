@@ -2,7 +2,7 @@
     $content = (object) $row->row_content;
     $bg_color = isset($content->bg_color) && $content->bg_color ? $content->bg_color : '';
     if(isset($is_product_page) && $is_product_page) {
-        $bg_color = 'bg-light-gold';
+        $bg_color = 'bg-light-lila';
     }
 @endphp
 

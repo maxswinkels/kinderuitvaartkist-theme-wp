@@ -7,7 +7,7 @@
           {!! $content->content !!}
       @endif
       @if(!empty($content->link))
-          @include('macros.button', ['link' => $content->link, 'class' => $btn_class ?? 'btn-gold'])
+          @include('macros.button', ['link' => $content->link, 'class' => $btn_class ?? 'btn-lila'])
       @endif
   </div>
 @endif

@@ -6,6 +6,7 @@ use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use App\Fields\GeneralSettings\ContactInfo;
 use App\Fields\GeneralSettings\ShopSettings;
+use App\Fields\GeneralSettings\Usps;
 
 class GeneralSettings extends Field
 {
@@ -26,7 +27,14 @@ class GeneralSettings extends Field
                 'label' => 'Shop instellingen',
                 'placement' => 'left'
             ])
-                ->addFields($this->get(ShopSettings::class));
+                ->addFields($this->get(ShopSettings::class))
+
+            ->addTab('usps', [
+                'label' => 'Usps',
+                'placement' => 'left'
+            ])
+                ->addFields($this->get(Usps::class));
+
         $builder
             ->setLocation('options_page', '==', 'general-settings');
 

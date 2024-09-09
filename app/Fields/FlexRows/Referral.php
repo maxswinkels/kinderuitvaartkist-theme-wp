@@ -12,7 +12,7 @@ class Referral extends Partial
     public function fields()
     {
         $referral = new FieldsBuilder('referral', [
-            'label' => 'Doorverwijzing',
+            'label' => 'Contact',
             'acfe_flexible_thumbnail' => \Roots\asset('referral.png'),
         ]);
 

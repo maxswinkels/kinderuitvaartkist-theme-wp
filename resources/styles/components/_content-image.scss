@@ -15,6 +15,24 @@
     .row {
       --vw-gutter-x: 0;
     }
+
+    .c-deco {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      max-width: 100%;
+      transform: translate(10%, -50%);
+
+      @include media-breakpoint-up(md) {
+        width: 134px;
+        transform: translate(20%, -36%);
+      }
+
+      @include media-breakpoint-up(xxl) {
+        transform: translate(45%, -25%);
+      }
+    }
   }
 
   &__col-content {
@@ -57,7 +75,7 @@
         margin-left: 1.25rem;
         padding: 1.875rem 3.125rem 3.3125rem 1.875rem;
         border-bottom-right-radius: 2.5rem;
-        background-color: $gold;
+        background-color: $lila;
 
         @include media-breakpoint-up(sm) {
           padding: 1.875rem 3.125rem 3.9375rem 1.875rem;
@@ -175,7 +193,7 @@
           left: 1.25rem;
           width: 100%;
           height: 100%;
-          border: 0.1875rem solid $gold;
+          border: 0.1875rem solid $lila;
           border-top-right-radius: 2.5rem;
           background-color: transparent;
           pointer-events: none;
@@ -188,6 +206,7 @@
       }
 
       .c-content-image--alt & {
+        overflow: hidden;
         border-top-left-radius: 2.5rem;
 
         @include media-breakpoint-up(md) {

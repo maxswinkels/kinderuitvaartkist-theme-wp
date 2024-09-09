@@ -2,7 +2,7 @@
     $content = (object) $row->row_content;
 @endphp
 
-<section class="o-section o-section--teasers bg-light-gold">
+<section class="o-section o-section--teasers bg-light-lila">
   <div class="container-fluid">
     <div class="c-teaser-blocks">
       <div class="row gy-5 gx-lg-5">

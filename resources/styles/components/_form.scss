@@ -29,7 +29,7 @@
   .form-control {
     .c-form-modal &,
     .o-section--contact & {
-      background-color: rgba($gold, 0.15);
+      background-color: rgba($lila, 0.15);
 
       // stylelint-disable
       &.form-control::input-placeholder {
@@ -58,6 +58,7 @@
   textarea.form-control {
     height: 140px;
     min-height: auto;
+    border-radius: 1.5625rem;
   }
 
   .form-submit {
@@ -84,7 +85,7 @@
     line-height: 1.714;
 
     a {
-      color: $gold;
+      color: $lila;
       text-decoration: none;
 
       &:hover,

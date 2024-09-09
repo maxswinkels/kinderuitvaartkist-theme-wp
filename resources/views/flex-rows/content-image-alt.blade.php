@@ -2,13 +2,14 @@
     $content = (object) $row->row_content;
 @endphp
 
-<section class="o-section o-section--content-image-alt bg-light-gold">
+<section class="o-section o-section--content-image-alt bg-light-lila">
   <div class="container-fluid-xl">
     <div class="c-content-image c-content-image--alt">
       <div class="row d-flex flex-sm-row-reverse">
         <div class="col-md-7 col-lg-6 c-content-image__col-content">
           <div class="c-content-image__col-content__inner">
-            @include('macros.text-block', ['content' => $content, 'class' => 'ms-md-auto text-white', 'heading_type' => 'h1', 'btn_class' => 'btn-black'])
+            <img src="@asset('deco-2.png')" alt="" class="c-deco">
+            @include('macros.text-block', ['content' => $content, 'class' => 'ms-md-auto text-white', 'heading_type' => 'h1', 'btn_class' => 'btn-green'])
           </div>
         </div>
         <div class="col-md-5 col-lg-6 c-content-image__col-image">

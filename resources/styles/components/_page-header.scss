@@ -13,7 +13,7 @@
     @include cover();
 
     z-index: -1;
-    background-color: $gold;
+    background-color: $lila;
 
     &::before {
       @include cover();

@@ -10,11 +10,17 @@ class HeroFrontPage extends Composer
     {
         return [
             'hero' => $this->hero(),
+            'usps' => $this->usps(),
         ];
     }
 
     public function hero()
     {
         return (object) get_field('hero_group');
+    }
+
+    public function usps()
+    {
+        return (object) get_field('usps', 'option');
     }
 }

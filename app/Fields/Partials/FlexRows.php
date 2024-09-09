@@ -13,6 +13,7 @@ use App\Fields\FlexRows\Image;
 use App\Fields\FlexRows\Teasers;
 use App\Fields\FlexRows\BrochureForm;
 use App\Fields\FlexRows\CallToAction;
+use App\Fields\FlexRows\CategoryHighlights;
 use App\Fields\FlexRows\ContentTwoCols;
 use App\Fields\FlexRows\Linings;
 use App\Fields\FlexRows\ProductHighlights;
@@ -42,7 +43,8 @@ class FlexRows extends Partial
                 ->addLayout($this->get(Referral::class))
                 ->addLayout($this->get(Usps::class))
                 ->addLayout($this->get(Accordion::class))
-                ->addLayout($this->get(ProductHighlights::class));
+                ->addLayout($this->get(ProductHighlights::class))
+                ->addLayout($this->get(CategoryHighlights::class));
 
         return $flexRows;
     }

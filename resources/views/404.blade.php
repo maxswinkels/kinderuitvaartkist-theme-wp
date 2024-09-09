@@ -9,7 +9,7 @@
         <div class="o-content">
           <h1>Pagina niet gevonden!</h1>
           <p>Helaas, wij hebben de door u opgevraagde pagina niet gevonden.</p>
-          <a class="btn btn-gold" href="/">Naar de homepage</a>
+          <a class="btn btn-lila" href="/">Naar de homepage</a>
         </div>
       </div>
     </section>

@@ -11,17 +11,19 @@ body.navbar-open {
   right: 0;
   left: 0;
   padding: 0.9375rem 0;
-  transition: padding 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  background: $white;
+  transition: padding 0.4s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: $white;
   box-shadow: 0 0 0.625rem rgba($black, 0.1);
 
   body.home & {
     transition:
       padding 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-      background 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      background-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 
     &:not(.has-scrolled) {
-      background: transparent;
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 
@@ -136,69 +138,73 @@ body.navbar-open {
   }
 
   &__phone,
-  &__toggle {
+  &__toggle,
+  &__cart {
     display: block;
     z-index: $zindex-modal + 1;
     width: 45px;
     height: 45px;
   }
 
-  &__phone {
+  &__phone,
+  &__cart {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0.625rem;
     margin-left: auto;
+    padding: 0;
     text-decoration: none;
 
-    body.home & {
-      transition:
-        background-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-        color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-        border-color 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .c-navbar:not(.has-scrolled):not(.is-open) & {
-      body.home & {
-        border-color: $white;
-        background-color: $white;
-        color: $black;
-
-        &:hover {
-          border-color: $gray-200;
-          background-color: $gray-200;
-        }
-      }
-    }
-
-    @include media-breakpoint-down(lg) {
-      padding: 0;
-    }
-
     @include media-breakpoint-up(lg) {
-      width: auto;
-      height: auto;
       margin-right: 0;
       margin-left: 0;
     }
 
-    span {
-      display: none;
+    svg {
+      width: 1.0938rem !important;
+      height: auto;
+      margin: 0 !important;
+      transform: none !important;
+    }
+  }
 
-      @include media-breakpoint-up(lg) {
-        display: block;
-      }
+  &__phone {
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      display: flex;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    margin-left: auto;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 0;
     }
 
-    svg {
-      width: 0.8125rem !important;
-      height: auto;
-      margin-right: 0.625rem !important;
-      margin-left: -0.3125rem !important;
+    @include media-breakpoint-up(lg) {
+      margin-left: 0.625rem;
+    }
 
-      @include media-breakpoint-down(lg) {
-        margin: 0 !important;
-      }
+    &__count {
+      display: none;
+      position: absolute;
+      top: -0.5rem;
+      right: -0.3125rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      padding: 0;
+      border-radius: 1.25rem;
+      background-color: $green;
+      color: $white;
+      font-size: 0.875rem;
+      font-weight: $font-weight-bold;
+      line-height: 1.25rem;
+      text-align: center;
+      pointer-events: none;
     }
   }
 
@@ -206,7 +212,8 @@ body.navbar-open {
     padding: 0;
     transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     border: 1px solid transparent;
-    background-color: $black;
+    border-radius: $border-radius;
+    background-color: $lila;
     color: $white;
 
     .is-transforming & {
@@ -223,28 +230,7 @@ body.navbar-open {
 
     &:hover,
     &:focus {
-      background-color: $gray-800;
-    }
-
-    body.home & {
-      transition:
-        background-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-        color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-        border-color 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .c-navbar:not(.has-scrolled):not(.is-open) & {
-      body.home & {
-        border-color: $white;
-        background-color: $white;
-        color: $black;
-
-        &:hover,
-        &:focus {
-          border-color: $gray-200;
-          background-color: $gray-200;
-        }
-      }
+      background-color: #ab9fb0;
     }
 
     &__bars {
@@ -287,7 +273,7 @@ body.navbar-open {
         justify-content: space-between;
         transition: color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
         font-size: 0.9375rem;
-        font-weight: 700;
+        font-weight: $font-weight-bold;
         line-height: 1.667;
 
         @include media-breakpoint-up(lg) {
@@ -418,7 +404,7 @@ body.navbar-open {
       background: none;
       color: $dark;
       font-size: 0.875rem;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       line-height: 1.714;
 
       .is-transforming & {
@@ -459,7 +445,7 @@ body.navbar-open {
   width: 100%;
   max-width: 100%;
   border-radius: 0;
-  background-color: $black;
+  background-color: $lila;
   color: $white;
 
   .tippy-content {

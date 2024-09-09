@@ -1,6 +1,6 @@
 .btn {
   svg {
-    width: 1rem;
+    width: 0.8125rem;
     height: auto;
 
     &:first-child {
@@ -42,10 +42,49 @@
   }
 }
 
-.btn-gold {
+.btn-lila {
   &,
   &:hover,
   &:focus {
     color: $white;
+  }
+}
+
+.btn-loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  .is-loading & {
+    display: block;
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    animation: load-animate infinite linear 1s;
+    border: 2px solid $white;
+    border-top: 2px solid transparent;
+    border-radius: 100%;
+  }
+}
+
+@keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

@@ -50,32 +50,13 @@
       {!! $fields->product_description !!}
     </div>
   @endif
-  
 
-  @if (isset($shop_settings->product_contact_form_shortcode) && !empty($shop_settings->product_contact_form_shortcode))
+  <div class="c-product-info__price">
+    {!! $product->get_price_html() !!}
+    <small>incl BTW</small>
+  </div>
 
-    <button type="button" class="c-product-info__order-btn btn btn-gold" data-bs-toggle="modal" data-bs-target="#contact-product-modal">
-      <span>Neem contact op</span>
-      @svg('arrow-right')
-    </button>
-
-    <div class="modal fade c-form-modal" id="contact-product-modal" tabindex="-1" aria-labelledby="contact-product-modal-title" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <button type="button" class="c-form-modal__close" data-bs-dismiss="modal" aria-label="Sluiten">
-            @svg('close')
-          </button>
-          <div class="c-form-modal__inner">
-            <h5 id="contact-product-modal-title" class="c-form-modal__title h3">Stel een vraag over "{!! $page_title !!}"</h5>
-            <div class="c-form">
-              {!! do_shortcode($shop_settings->product_contact_form_shortcode) !!}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  @endif
+  @include('woocommerce.partials.add-to-cart')
 
   <div class="accordion accordion--product-info" id="product-accordions">
     @if ($fields->product_description_lining)
