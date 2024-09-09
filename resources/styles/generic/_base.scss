@@ -1,0 +1,18 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizespeed;
+}
+
+body {
+  padding-top: 6.5625rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 7.3125rem;
+  }
+
+  &.home {
+    padding-top: 0;
+  }
+}

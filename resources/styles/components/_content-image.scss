@@ -1,0 +1,204 @@
+.c-content-image {
+  & + .c-content-image {
+    margin-top: 3.125rem;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 1.875rem;
+    }
+  }
+
+  .row {
+    --vw-gutter-x: 2.5rem;
+  }
+
+  &--alt {
+    .row {
+      --vw-gutter-x: 0;
+    }
+  }
+
+  &__col-content {
+    margin-bottom: 3.125rem;
+
+    .c-content-image--alt & {
+      margin-bottom: 3.75rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 4.375rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+
+    .o-content {
+      @include media-breakpoint-down(lg) {
+        h2 {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        max-width: 439px;
+      }
+    }
+
+    &__inner {
+      .c-content-image--alt & {
+        position: relative;
+        max-width: 100%;
+        margin-left: 1.25rem;
+        padding: 1.875rem 3.125rem 3.3125rem 1.875rem;
+        border-bottom-right-radius: 2.5rem;
+        background-color: $gold;
+
+        @include media-breakpoint-up(sm) {
+          padding: 1.875rem 3.125rem 3.9375rem 1.875rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          padding: 5.4375rem 2.5rem 5.4375rem 5.875rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+          padding: 5.4375rem 2.5rem 5.4375rem 7rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: -1.25rem;
+          left: -1.25rem;
+          width: 100%;
+          height: 100%;
+          border: 0.1875rem solid $white;
+          border-bottom-right-radius: 2.5rem;
+          background-color: transparent;
+          pointer-events: none;
+
+          @include media-breakpoint-up(sm) {
+            top: -1.875rem;
+            left: -1.875rem;
+          }
+
+          @include media-breakpoint-up(md) {
+            top: 1.875rem;
+            left: 1.875rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__col-image {
+    .c-content-image--alt & {
+      z-index: 1;
+    }
+
+    &__inner {
+      .c-content-image--alt &,
+      .c-content-image--left &,
+      .c-content-image--right & {
+        .o-image {
+          overflow: hidden;
+        }
+      }
+
+      .c-content-image--left &,
+      .c-content-image--right & {
+        position: relative;
+      }
+
+      .c-content-image--left & {
+        margin-left: 1.25rem;
+
+        @include media-breakpoint-up(sm) {
+          margin-left: 1.875rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          margin-left: 0;
+        }
+
+        .o-image {
+          border-top-left-radius: 2.5rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: -1.25rem;
+          left: -1.25rem;
+          width: 100%;
+          height: 100%;
+          border: 0.1875rem solid $green;
+          border-top-left-radius: 2.5rem;
+          background-color: transparent;
+          pointer-events: none;
+
+          @include media-breakpoint-up(sm) {
+            top: -1.875rem;
+            left: -1.875rem;
+          }
+        }
+      }
+
+      .c-content-image--right & {
+        margin-right: 1.25rem;
+
+        @include media-breakpoint-up(sm) {
+          margin-right: 1.875rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          margin-right: 0;
+        }
+
+        .o-image {
+          border-top-right-radius: 2.5rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: -1.25rem;
+          left: 1.25rem;
+          width: 100%;
+          height: 100%;
+          border: 0.1875rem solid $gold;
+          border-top-right-radius: 2.5rem;
+          background-color: transparent;
+          pointer-events: none;
+
+          @include media-breakpoint-up(sm) {
+            top: -1.875rem;
+            left: 1.875rem;
+          }
+        }
+      }
+
+      .c-content-image--alt & {
+        border-top-left-radius: 2.5rem;
+
+        @include media-breakpoint-up(md) {
+          margin-top: -1.875rem;
+          margin-right: -5.1875rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+          margin-right: -5.75rem;
+        }
+      }
+    }
+  }
+}

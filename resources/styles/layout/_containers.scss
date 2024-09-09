@@ -1,0 +1,36 @@
+@use "sass:map";
+
+.container-fluid {
+  max-width: map.get($container-max-widths, "xxl");
+  padding-right: $container-padding-x;
+  padding-left: $container-padding-x;
+
+  @include media-breakpoint-up(md) {
+    padding-right: $container-padding-x * 2;
+    padding-left: $container-padding-x * 2;
+  }
+}
+
+.container-fluid-xl {
+  @extend .container-fluid;
+
+  max-width: map.get($container-max-widths, "xl");
+}
+
+.container-fluid-lg {
+  @extend .container-fluid;
+
+  max-width: map.get($container-max-widths, "lg");
+}
+
+.container-fluid-md {
+  @extend .container-fluid;
+
+  max-width: map.get($container-max-widths, "md");
+}
+
+.container-fluid-sm {
+  @extend .container-fluid;
+
+  max-width: map.get($container-max-widths, "sm");
+}

@@ -1,0 +1,19 @@
+.c-product-overview {
+  --vw-gutter-x: 2.5rem;
+}
+
+.c-product-grid {
+  --vw-gutter-x: 2.5rem;
+  --vw-gutter-y: 1.9375rem;
+}
+
+.c-product-not-found {
+  position: relative;
+  margin-top: 4.6875rem;
+  margin-bottom: 4.6875rem;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+  }
+}

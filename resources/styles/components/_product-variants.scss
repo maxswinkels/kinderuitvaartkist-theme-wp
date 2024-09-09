@@ -1,0 +1,54 @@
+.c-product-variants {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5625rem -0.3125rem -5px;
+
+  &__item {
+    flex: 0 0 4.8125rem;
+    max-width: 4.8125rem;
+    margin: 0.3125rem;
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 5.4375rem;
+      max-width: 5.4375rem;
+      margin: 0.625rem;
+    }
+  }
+}
+
+.c-product-variant {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: 0.625rem;
+  overflow: hidden;
+  border: 1px solid $light-gray;
+  background-color: $white;
+
+  @include aspect-ratio(1, 1);
+
+  &.is-active {
+    border-color: rgba($black, 0.25);
+  }
+
+  &__image {
+    @include cover();
+
+    object-fit: contain;
+    padding: 8%;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .c-product-variant:not(.no-link):hover & {
+      transform: scale(1.05);
+      transform-origin: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

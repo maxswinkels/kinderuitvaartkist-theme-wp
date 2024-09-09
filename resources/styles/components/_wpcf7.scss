@@ -1,0 +1,49 @@
+// custom contact form 7 styling
+.wpcf7 {
+  p {
+    margin: 0;
+  }
+
+  // alert styling
+  .wpcf7-not-valid {
+    border-color: $danger;
+  }
+
+  span.wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  form {
+    .wpcf7-response-output {
+      margin: 1.25rem 0 0;
+      border-color: transparent;
+      color: $white;
+    }
+
+    &.failed .wpcf7-response-output,
+    &.aborted .wpcf7-response-output,
+    &.invalid .wpcf7-response-output,
+    &.unaccepted .wpcf7-response-output {
+      padding: 0.9375rem;
+      border-color: transparent;
+      background-color: $danger;
+    }
+
+    &.sent .wpcf7-response-output {
+      padding: 0.9375rem;
+      border-color: transparent;
+      background-color: $success;
+    }
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.714;
+
+    a {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.o-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.o-wrapper-image-full {
+  @include aspect-ratio(1440, 850);
+
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(md) {
+    @include aspect-ratio(1440, 470);
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,96 @@
+.c-form {
+  display: block;
+
+  .o-section--brochure-form & {
+    max-width: 27.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .o-section--contact & {
+    height: 100%;
+    padding: 1.875rem 1.875rem 2.5rem;
+    background-color: $white;
+  }
+
+  .form-group {
+    margin-bottom: 0.625rem;
+  }
+
+  .form-row {
+    --vw-gutter-x: 10px;
+
+    @extend .row;
+
+    .form-group {
+      @extend .col-md-6;
+    }
+  }
+
+  .form-control {
+    .c-form-modal &,
+    .o-section--contact & {
+      background-color: rgba($gold, 0.15);
+
+      // stylelint-disable
+      &.form-control::input-placeholder {
+        opacity: 1;
+        color: $body-color;
+      }
+
+      &:placeholder {
+        opacity: 1;
+        color: $body-color;
+      }
+
+      &::placeholder {
+        opacity: 1;
+        color: $body-color;
+      }
+
+      &:input-placeholder {
+        opacity: 1;
+        color: $body-color;
+      }
+      // stylelint-enable
+    }
+  }
+
+  textarea.form-control {
+    height: 140px;
+    min-height: auto;
+  }
+
+  .form-submit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9375rem;
+
+    .o-section--contact & {
+      margin-top: 1.25rem;
+    }
+
+    .wpcf7-spinner {
+      display: block;
+      margin: 0;
+      padding: 0;
+      background-color: $dark;
+    }
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.714;
+
+    a {
+      color: $gold;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

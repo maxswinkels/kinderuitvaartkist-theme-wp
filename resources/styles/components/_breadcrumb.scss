@@ -1,0 +1,18 @@
+.woocommerce {
+  .woocommerce-breadcrumb {
+    color: $dark;
+    font-size: 1rem;
+    line-height: 1.375;
+
+    a {
+      color: $dark;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: 0.125rem;
+      }
+    }
+  }
+}

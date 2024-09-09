@@ -1,0 +1,31 @@
+.c-social-icons {
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 0.625rem;
+    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $gold;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      width: auto;
+      height: 50%;
+      vertical-align: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.btn {
+  svg {
+    width: 1rem;
+    height: auto;
+
+    &:first-child {
+      margin-right: 0.625rem;
+    }
+
+    &:last-child {
+      margin-left: 0.625rem;
+      transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &:hover {
+    svg {
+      &:last-child {
+        transform: translateX(0.3125rem);
+      }
+    }
+  }
+}
+
+.btn-link {
+  margin: -1em;
+  padding: 1em;
+  font-weight: $btn-font-weight;
+  text-decoration: none;
+
+  svg {
+    width: 1rem;
+    height: auto;
+  }
+}
+
+.btn-black {
+  &:hover,
+  &:focus {
+    border-color: transparent;
+    background-color: rgba($black, 0.7);
+  }
+}
+
+.btn-gold {
+  &,
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}

@@ -1,0 +1,65 @@
+.c-teaser-blocks {
+  .o-section.o-section--intro-front-page + .o-section.o-section--teasers & {
+    margin-top: -15rem;
+  }
+}
+
+.c-teaser-block {
+  display: block;
+  position: relative;
+  text-decoration: none;
+
+  &__image {
+    @include aspect-ratio(400, 500);
+
+    z-index: 0;
+    max-height: 500px;
+    overflow: hidden;
+    border-top-right-radius: 2.5rem;
+
+    img {
+      @include cover();
+
+      object-fit: cover;
+      will-change: transform;
+      transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+      .c-teaser-block:hover & {
+        transform: scale(1.05);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 1.875rem);
+    margin-top: -5rem;
+    padding: 1.25rem;
+    border-top-right-radius: 2.5rem;
+    background-color: $white;
+
+    @include media-breakpoint-up(md) {
+      width: calc(100% - 1.25rem);
+      margin-top: -5rem;
+      padding: 2.1875rem 1.25rem 1.25rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: calc(100% - 1.875rem);
+      margin-top: -9.25rem;
+      padding: 2.1875rem 1.875rem 1.875rem;
+    }
+
+    .btn {
+      svg {
+        transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+        .c-teaser-block:hover & {
+          transform: translateX(0.3125rem);
+        }
+      }
+    }
+  }
+}

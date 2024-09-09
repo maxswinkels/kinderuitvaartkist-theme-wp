@@ -1,0 +1,38 @@
+.c-usps {
+  margin-top: 3.125rem;
+
+  .row {
+    --vw-gutter-y: 3.125rem;
+    --vw-gutter-x: 2.5rem;
+  }
+}
+
+.c-usp {
+  display: flex;
+  align-items: flex-start;
+
+  &__icon {
+    flex: 0 0 1.875rem;
+    width: 1.875rem;
+    height: auto;
+    margin-right: 1.875rem;
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 2.5rem;
+      width: 2.5rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 0.625rem;
+  }
+}

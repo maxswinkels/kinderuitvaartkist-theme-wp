@@ -1,0 +1,45 @@
+.c-form-modal {
+  .modal-content {
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+  }
+
+  &__close {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    border: none;
+    background-color: $gold;
+    color: $white;
+
+    &:hover {
+      @include gradient-bg(tint-color($gold, $btn-hover-bg-shade-amount));
+    }
+
+    svg {
+      width: 0.875rem;
+      height: auto;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding: 1.5625rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 1.875rem 3.125rem 2.5rem;
+    }
+  }
+
+  &__title {
+    padding-right: 2.8125rem;
+  }
+}

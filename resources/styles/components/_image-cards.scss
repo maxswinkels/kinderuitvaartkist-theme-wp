@@ -1,0 +1,52 @@
+.c-image-cards {
+  .o-content + & {
+    margin-top: 3.125rem;
+  }
+
+  &__group {
+    & + & {
+      margin-top: 3.125rem;
+    }
+
+    &__title {
+      padding-bottom: 0.5rem;
+      border-bottom: 0.125rem solid $gold;
+    }
+
+    .row {
+      --vw-gutter-y: 1.25rem;
+
+      @include media-breakpoint-between(md, lg) {
+        --vw-gutter-x: 0.3125rem;
+      }
+    }
+  }
+}
+
+.c-image-card {
+  &__image {
+    @include aspect-ratio(365px, 247px);
+
+    img {
+      @include cover();
+
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+    font-family: $font-family-base;
+    font-size: 1.0625rem;
+    font-weight: $font-weight-bold;
+    line-height: 1.412;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

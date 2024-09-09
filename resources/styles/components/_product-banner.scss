@@ -1,0 +1,67 @@
+.c-product-banner {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: $white;
+
+  @include aspect-ratio(290, 200);
+
+  &__background {
+    @include cover();
+
+    z-index: -1;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: $gold;
+    will-change: transform;
+
+    &::before {
+      @include cover();
+
+      content: "";
+      background-color: rgba($black, 0.25);
+    }
+
+    &.has-no-image {
+      &::before {
+        display: none;
+      }
+    }
+
+    .c-product-banner:not(.no-link):hover & {
+      transform: scale(1.05);
+      transform-origin: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 15% 9%;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    line-height: normal;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.875rem;
+      line-height: 1.333;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .c-product-grid__item--banner & {
+        font-size: 2.25rem;
+        line-height: normal;
+      }
+    }
+  }
+}

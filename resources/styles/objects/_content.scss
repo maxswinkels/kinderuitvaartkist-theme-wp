@@ -1,0 +1,19 @@
+.o-content {
+  .o-section:not(.o-section--referral) & {
+    h1 {
+      @include font-size($h2-font-size);
+    }
+
+    h2 {
+      @include font-size($h3-font-size);
+    }
+  }
+
+  .btn {
+    margin-top: 0.9375rem;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.c-product-title {
+  margin-bottom: 0.625rem;
+  font-family: $font-family-base;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.c-product-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.333;
+}
+
+.c-product-info {
+  @include media-breakpoint-up(lg) {
+    padding-left: 2.5rem;
+  }
+
+  &__description {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+
+  &__order-btn {
+    width: 100%;
+    margin-top: 1.875rem;
+  }
+}
+
+.c-product-sizes {
+  &__inner {
+    display: flex;
+  }
+
+  table {
+    &:first-child {
+      margin-right: 3.5rem;
+    }
+
+    th {
+      font-weight: 300;
+    }
+  }
+}
