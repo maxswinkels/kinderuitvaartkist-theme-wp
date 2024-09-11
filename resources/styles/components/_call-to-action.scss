@@ -5,7 +5,7 @@
     padding: 1.875rem;
     border-bottom-right-radius: 2.5rem;
     background-color: $green;
-    color: $white;
+    color: $brown;
 
     @include media-breakpoint-up(sm) {
       margin-right: 1.875rem;
@@ -39,9 +39,16 @@
       max-width: 680px;
     }
 
-    p,
+    p {
+      color: $brown;
+    }
+
     a {
-      color: $white;
+      color: $brown;
+
+      &:hover {
+        color: $brown;
+      }
     }
   }
 }

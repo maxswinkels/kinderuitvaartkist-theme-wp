@@ -1,4 +1,4 @@
-<section class="o-section o-section--intro-front-page bg-green text-white" id="intro">
+<section class="o-section o-section--intro-front-page bg-green" id="intro">
   <div class="container-fluid-xl">
     <div class="row gx-5">
       <div class="col-md-6">
@@ -12,7 +12,7 @@
             {!! $intro->content !!}
           @endif
         </div>
-        @include('macros.link', ['link' => $intro->link, 'theme' => 'white'])
+        @include('macros.link', ['link' => $intro->link, 'theme' => 'brown'])
       </div>
     </div>
   </div>

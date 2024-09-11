@@ -7,6 +7,7 @@ body {
 
 body {
   padding-top: 6.5625rem;
+  color: $brown !important;
 
   @include media-breakpoint-up(lg) {
     padding-top: 7.3125rem;

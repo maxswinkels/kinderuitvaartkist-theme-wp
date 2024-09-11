@@ -1,6 +1,6 @@
 .c-footer {
   background-color: $green;
-  color: $white;
+  color: $brown;
 
   &__main {
     padding: 50px 0;
@@ -74,7 +74,7 @@
 
 .c-footer-title {
   margin-bottom: 0;
-  color: rgba($white, 0.5);
+  color: rgba($brown, 0.5);
   font-family: $font-family-base;
   font-size: 0.875rem;
   font-weight: 700;
@@ -91,7 +91,7 @@
   }
 
   a {
-    color: $white;
+    color: $brown;
     text-decoration: none;
 
     &:hover {
@@ -105,7 +105,7 @@
 .c-footer-socials {
   .c-social-icons {
     &__link {
-      background-color: rgba($white, 0.2);
+      background-color: rgba($brown, 0.2);
     }
   }
 }
@@ -125,10 +125,10 @@
     width: 6.875rem;
     max-width: 100%;
     transition: color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-    color: $white;
+    color: $brown;
 
     &:hover {
-      color: rgba($white, 0.8);
+      color: rgba($brown, 0.8);
     }
 
     svg {

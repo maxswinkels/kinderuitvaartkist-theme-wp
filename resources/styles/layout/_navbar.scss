@@ -13,7 +13,7 @@ body.navbar-open {
   padding: 0.9375rem 0;
   transition: padding 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   background: $white;
-  box-shadow: 0 0 0.625rem rgba($black, 0.1);
+  box-shadow: 0 0 0.625rem rgba($brown, 0.1);
 
   body.home & {
     transition:
@@ -44,7 +44,7 @@ body.navbar-open {
     transition:
       transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
       width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    color: $black;
+    color: $brown;
 
     body.home & {
       transition:
@@ -162,7 +162,7 @@ body.navbar-open {
       body.home & {
         border-color: $white;
         background-color: $white;
-        color: $black;
+        color: $brown;
 
         &:hover {
           border-color: $gray-200;
@@ -206,7 +206,7 @@ body.navbar-open {
     padding: 0;
     transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     border: 1px solid transparent;
-    background-color: $black;
+    background-color: $green;
     color: $white;
 
     .is-transforming & {
@@ -237,7 +237,7 @@ body.navbar-open {
       body.home & {
         border-color: $white;
         background-color: $white;
-        color: $black;
+        color: $brown;
 
         &:hover,
         &:focus {
@@ -293,7 +293,7 @@ body.navbar-open {
         @include media-breakpoint-up(lg) {
           padding-right: math.div($navbar-nav-link-padding-x, 2);
           padding-left: math.div($navbar-nav-link-padding-x, 2);
-          color: $black;
+          color: $brown;
 
           body.home & {
             transition: color 0.4s cubic-bezier(0.19, 1, 0.22, 1);
@@ -459,7 +459,7 @@ body.navbar-open {
   width: 100%;
   max-width: 100%;
   border-radius: 0;
-  background-color: $black;
+  background-color: $brown;
   color: $white;
 
   .tippy-content {
@@ -502,7 +502,7 @@ body.navbar-open {
   left: 0;
   transition: opacity 0.15s linear;
   opacity: 0;
-  background-color: $black;
+  background-color: $brown;
   pointer-events: none;
 
   .navbar-open & {

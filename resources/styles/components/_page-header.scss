@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 4.6875rem;
   padding-bottom: 4.6875rem;
-  color: $white;
+  color: $brown;
 
   @include media-breakpoint-up(md) {
     padding-top: 6.25rem;
@@ -13,7 +13,7 @@
     @include cover();
 
     z-index: -1;
-    background-color: $gold;
+    background-color: $orange;
 
     &::before {
       @include cover();
